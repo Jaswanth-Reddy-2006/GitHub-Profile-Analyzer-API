@@ -118,7 +118,7 @@ Stored fields include:
 ## Submission Checklist
 
 - GitHub repository link: https://github.com/Jaswanth-Reddy-2006/GitHub-Profile-Analyzer-API.git
-- Live deployed API URL: Add your deployment URL here.
+- Live deployed API URL: https://github-profile-analyzer-api-production.up.railway.app/
 - README file with setup instructions: Included.
 - Database schema/export: Included as `schema.sql`.
 - Postman collection: Included as `postman_collection.json`.
