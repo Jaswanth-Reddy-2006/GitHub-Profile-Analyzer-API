@@ -1,0 +1,29 @@
+{
+  "name": "github-profile-analyzer-api",
+  "version": "1.0.0",
+  "description": "Backend API that analyzes public GitHub profiles and stores useful insights in MySQL.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node tests/profile.service.test.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql",
+    "github-api",
+    "profile-analyzer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.5"
+  },
+  "devDependencies": {}
+}

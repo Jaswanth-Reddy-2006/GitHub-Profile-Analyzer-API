@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "GitHub Profile Analyzer API",
+    "description": "Postman collection for the GitHub Profile Analyzer API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "username",
+      "value": "octocat"
+    }
+  ],
+  "item": [
+    {
+      "name": "API Info",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/"
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Analyze GitHub Profile",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/profiles/analyze/{{username}}"
+      }
+    },
+    {
+      "name": "Get All Stored Profiles",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/profiles"
+      }
+    },
+    {
+      "name": "Get Stored Profile By Username",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/profiles/{{username}}"
+      }
+    }
+  ]
+}
