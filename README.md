@@ -122,3 +122,27 @@ Stored fields include:
 - README file with setup instructions: Included.
 - Database schema/export: Included as `schema.sql`.
 - Postman collection: Included as `postman_collection.json`.
+
+## Railway Deployment Notes
+
+The app can read either the custom `DB_*` variables or Railway's MySQL variables:
+
+- `MYSQLHOST`
+- `MYSQLPORT`
+- `MYSQLUSER`
+- `MYSQLPASSWORD`
+- `MYSQLDATABASE`
+
+If you use Railway MySQL in the same project, add these variables to the Node.js service using Railway reference variables:
+
+```env
+NODE_ENV=production
+MYSQLHOST=${{MySQL.MYSQLHOST}}
+MYSQLPORT=${{MySQL.MYSQLPORT}}
+MYSQLUSER=${{MySQL.MYSQLUSER}}
+MYSQLPASSWORD=${{MySQL.MYSQLPASSWORD}}
+MYSQLDATABASE=${{MySQL.MYSQLDATABASE}}
+GITHUB_REPO_PAGE_LIMIT=10
+```
+
+Do not set `PORT` manually on Railway. Railway injects it automatically.
